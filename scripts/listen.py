@@ -9,7 +9,7 @@ import urllib
 import urllib2
 
 HOSTNAME = socket.gethostname()
-SERVER_HOST = '10.1.1.71'
+SERVER_ENDPOINT = 'http://10.1.1.71/agent_report'
 
 
 def main_loop():
@@ -76,7 +76,7 @@ def report(sightings):
         print(data)
         # don't crash if the request fails
         try:
-            req = urllib2.urlopen(SERVER_HOST, urllib.urlencode(data))
+            req = urllib2.urlopen(SERVER_ENDPOINT, urllib.urlencode(data))
             req.close()
         except:
             pass
