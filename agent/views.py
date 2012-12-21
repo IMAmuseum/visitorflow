@@ -1,8 +1,10 @@
 from django.http import HttpResponse, HttpResponseBadRequest
+from django.views.decorators.csrf import csrf_exempt
 from agent.models import Sighting
 
 
-def Report(request):
+@csrf_exempt
+def report(request):
     if (request.method == 'POST'
       and request.POST.get('host') is not None
       and request.POST.get('device_id') is not None
