@@ -14,6 +14,11 @@ framework.
 
 """
 import os
+import sys
+
+path = '/var/www/vflow'
+if path not in sys.path:
+    sys.path.append(path)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "visitorflow.settings")
 
