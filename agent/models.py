@@ -6,3 +6,4 @@ class Sighting(models.Model):
     device_id = models.CharField(max_length=32)
     signal_dbm = models.IntegerField()
     timestamp = models.IntegerField()
+    processed = models.BooleanField(default=False)
