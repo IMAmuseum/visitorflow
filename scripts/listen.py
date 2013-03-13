@@ -9,7 +9,7 @@ import urllib
 import urllib2
 
 HOSTNAME = socket.gethostname()
-SERVER_ENDPOINT = 'http://10.1.1.71/agent/report/'
+SERVER_ENDPOINT = 'http://10.11.0.11/agent/report/'
 
 
 def main_loop():
